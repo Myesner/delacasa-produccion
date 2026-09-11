@@ -65,12 +65,12 @@ export default function ContainerIcon({
       {variant !== "outline" && (
         <g clipPath={`url(#${clipId})`}>
           {variant === "full" ? (
-            <rect x="12" y="10" width="96" height="70" fill="#D9A441" />
+            <rect x="12" y="10" width="96" height="70" fill="#E3AC2F" />
           ) : (
             <motion.rect
               x="12"
               width="96"
-              fill="#D9A441"
+              fill="#E3AC2F"
               initial={animated ? { y: 80, height: 0 } : { y: fillY, height: fillH }}
               animate={{ y: fillY, height: fillH }}
               transition={{ duration: 1.2, delay: animated ? 0.7 : 0, ease: "easeOut" }}

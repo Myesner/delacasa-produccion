@@ -48,9 +48,9 @@ function barraSuperiorRedonda(x: number, y: number, w: number, h: number, r: num
 }
 
 function colorBarra(m: ProyeccionMes, mesReferencia: string): string {
-  if (m.metaCumplida) return "#6B7F4E"; // green-600
-  if (m.mes === mesReferencia) return "#A97424"; // amber-600
-  return "#D9A441"; // amber-400
+  if (m.metaCumplida) return "#4E8A3C"; // green-600
+  if (m.mes === mesReferencia) return "#A67B1E"; // amber-600
+  return "#E3AC2F"; // amber-400
 }
 
 /* Etiqueta sobre cada barra: valor Fraunces + glifo mini de contenedor.
@@ -66,7 +66,7 @@ interface EtiquetaBarraProps {
   value?: number | string;
 }
 
-function EtiquetaBarra({ enLibras, fmtMiles, tintEje = "#8C7B66", tintTexto = "#3A2E20", x, y, width, value }: EtiquetaBarraProps) {
+function EtiquetaBarra({ enLibras, fmtMiles, tintEje = "#7E8698", tintTexto = "#26305A", x, y, width, value }: EtiquetaBarraProps) {
   const nx = Number(x ?? 0);
   const ny = Number(y ?? 0);
   const nw = Number(width ?? 0);
@@ -156,9 +156,9 @@ export default function GraficaMensual({ meses, unidad, mesReferencia, seleccion
     [],
   );
 
-  const tintEje = "#8C7B66"; // slate-warm
-  const tintTexto = dark ? "#EDE4D3" : "#3A2E20";
-  const tintGrid = dark ? "#453826" : "#EADFC9";
+  const tintEje = "#7E8698"; // slate-warm
+  const tintTexto = dark ? "#EDE4D3" : "#26305A";
+  const tintGrid = dark ? "#2B3452" : "#EADFC9";
 
   /* Barra custom: color por estado, click selecciona, seleccionada levanta 4px. */
   const renderBarra = (props: { x?: unknown; y?: unknown; width?: unknown; height?: unknown; payload?: DatoGrafica }) => {
@@ -177,7 +177,7 @@ export default function GraficaMensual({ meses, unidad, mesReferencia, seleccion
         style={{
           cursor: "pointer",
           transform: sel ? "translateY(-4px)" : "translateY(0)",
-          filter: sel ? "drop-shadow(0 8px 10px rgba(58,46,32,0.35))" : "none",
+          filter: sel ? "drop-shadow(0 8px 10px rgba(38,48,90,0.35))" : "none",
           transition: "transform 0.25s ease-out, filter 0.25s ease-out",
         }}
       />
@@ -243,16 +243,16 @@ export default function GraficaMensual({ meses, unidad, mesReferencia, seleccion
               tickFormatter={(v: number) => (enLibras ? fmtMiles.format(v) : String(v))}
               allowDecimals={!enLibras}
             />
-            <Tooltip content={<TooltipProyeccion />} cursor={{ fill: dark ? "rgba(237,228,211,0.05)" : "rgba(58,46,32,0.05)" }} />
+            <Tooltip content={<TooltipProyeccion />} cursor={{ fill: dark ? "rgba(237,228,211,0.05)" : "rgba(38,48,90,0.05)" }} />
             <ReferenceLine
               y={enLibras ? metaLb : CONFIG.metaContenedoresMes}
-              stroke="#C05B3A"
+              stroke="#DE4A1F"
               strokeDasharray="6 4"
               strokeWidth={1.6}
               label={{
                 value: enLibras ? `Meta: ${formatLb(metaLb)}` : "Meta: 4",
                 position: "insideTopRight",
-                fill: "#C05B3A",
+                fill: "#DE4A1F",
                 fontSize: 12,
                 fontWeight: 600,
                 fontFamily: "Sora, sans-serif",

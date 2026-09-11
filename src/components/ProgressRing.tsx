@@ -40,7 +40,7 @@ export default function ProgressRing({
   const circ = 2 * Math.PI * r;
   const pct = Math.max(0, Math.min(1, value / max));
   const completo = pct >= 1;
-  const arco = completo ? "#6B7F4E" : "#D9A441"; // green-600 al 100%
+  const arco = completo ? "#4E8A3C" : "#E3AC2F"; // green-600 al 100%
   const s = mini ? size : size;
 
   return (

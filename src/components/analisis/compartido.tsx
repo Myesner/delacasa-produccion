@@ -13,15 +13,15 @@ export const EASE = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 /** Hex de la paleta "Cueva de Maduración" (design.md §3) para Recharts. */
 export const COLORES = {
-  amber400: "#D9A441",
-  amber600: "#A97424",
+  amber400: "#E3AC2F",
+  amber600: "#A67B1E",
   cream50: "#FAF6EE",
   cream200: "#EADFC9",
-  brown900: "#3A2E20",
-  green600: "#6B7F4E",
-  rust500: "#C05B3A",
+  brown900: "#26305A",
+  green600: "#4E8A3C",
+  rust500: "#DE4A1F",
   ochre500: "#D08726",
-  slateWarm: "#8C7B66",
+  slateWarm: "#7E8698",
 } as const;
 
 /** 48,400 → "48,4k" — formato compacto de ejes en lb. */
