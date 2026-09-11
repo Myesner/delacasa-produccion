@@ -4,7 +4,7 @@
 export default function PageStub({ titulo, descripcion }: { titulo: string; descripcion: string }) {
   return (
     <section className="card-warm flex flex-col items-center justify-center gap-4 py-24 text-center">
-      <img src="/container-iso.svg" alt="" className="h-40 w-auto opacity-60 dark:opacity-40" />
+      <img src={`${import.meta.env.BASE_URL}container-iso.svg`} alt="" className="h-40 w-auto opacity-60 dark:opacity-40" />
       <h1 className="font-display text-3xl font-semibold tracking-[-0.02em] text-brown-900 dark:text-bodega-text">
         {titulo}
       </h1>

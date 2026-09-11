@@ -101,14 +101,14 @@ function Hero({ resumen, resumenMes, mesLabel }: { resumen: ResumenGeneral; resu
     >
       {/* Textura crema de fondo (25% opacidad) */}
       <img
-        src="/texture-crema.png"
+        src={`${import.meta.env.BASE_URL}texture-crema.png`}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25 dark:opacity-10"
       />
       {/* Panel visual derecho: bodega (solo ≥1024px, 35% opacidad, fade a la izquierda) */}
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block" aria-hidden="true">
-        <img src="/bodega-maduracion.png" alt="" className="h-full w-full object-cover opacity-35 dark:opacity-25" />
+        <img src={`${import.meta.env.BASE_URL}bodega-maduracion.png`} alt="" className="h-full w-full object-cover opacity-35 dark:opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-r from-cream-100 via-cream-100/70 to-cream-100/10 dark:from-bodega-panel dark:via-bodega-panel/70 dark:to-bodega-panel/10" />
       </div>
 
@@ -675,7 +675,7 @@ function ResumenMesCard({
     // Empty state (design §Estados especiales)
     return (
       <section className="card-warm flex flex-col items-center gap-4 p-12 text-center" aria-label="Resumen del mes">
-        <img src="/container-iso.svg" alt="" className="h-44 w-auto opacity-70 dark:opacity-40" />
+        <img src={`${import.meta.env.BASE_URL}container-iso.svg`} alt="" className="h-44 w-auto opacity-70 dark:opacity-40" />
         <h2 className="font-display text-2xl font-semibold text-brown-900 dark:text-bodega-text">
           Sin proyección para este mes
         </h2>

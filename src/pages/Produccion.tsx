@@ -854,7 +854,7 @@ export default function Produccion({ embedded = false, initialMonth }: { embedde
           animate={{ opacity: 1, y: 0 }}
           className="card-warm flex flex-col items-center justify-center gap-4 py-20 text-center"
         >
-          <img src="/rueda-queso.svg" alt="" className="h-28 w-28 opacity-70 dark:invert" />
+          <img src={`${import.meta.env.BASE_URL}rueda-queso.svg`} alt="" className="h-28 w-28 opacity-70 dark:invert" />
           <div>
             <p className="font-display text-xl font-semibold text-brown-900 dark:text-bodega-text">
               Ningún lote coincide con los filtros

@@ -182,7 +182,7 @@ function VacioGrafica() {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
       <img
-        src="/rueda-queso.svg"
+        src={`${import.meta.env.BASE_URL}rueda-queso.svg`}
         alt=""
         className="h-[120px] w-[120px] opacity-40 dark:invert"
       />

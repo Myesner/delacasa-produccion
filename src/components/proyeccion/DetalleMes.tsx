@@ -68,7 +68,7 @@ export default function DetalleMes({ mes, onEmpacar }: DetalleMesProps) {
 
           {sinLotes ? (
             <div className="mt-6 flex flex-col items-center gap-3 rounded-2xl border border-dashed border-cream-200 py-10 text-center dark:border-bodega-border">
-              <img src="/container-iso.svg" alt="" className="w-28 opacity-25 dark:invert" />
+              <img src={`${import.meta.env.BASE_URL}container-iso.svg`} alt="" className="w-28 opacity-25 dark:invert" />
               <p className="text-sm text-slate-warm">Sin salidas proyectadas — agregar producción</p>
             </div>
           ) : (

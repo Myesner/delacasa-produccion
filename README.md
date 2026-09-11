@@ -47,8 +47,25 @@ Para ejecutar el escenario de demostración, define `VITE_DATA_SOURCE=mock` al
 iniciar Vite. La aplicación nunca cambia automáticamente a datos ficticios si
 la lectura del Sheet falla.
 
-## Publicación posterior
+## Publicación automática
 
-La publicación del sitio se configurará por separado. Si se utiliza GitHub Pages,
-habrá que ajustar la ruta base, los recursos y el manejo de rutas de React Router
-al nombre del repositorio antes de desplegar.
+GitHub Actions está configurado en `.github/workflows/pages.yml`.
+Cada cambio subido a `main` ejecuta lint, pruebas y compilación antes de publicar.
+También puede iniciarse desde Actions → Publicar DELACASA → Run workflow.
+La primera publicación requiere activar Pages con fuente GitHub Actions en el repositorio.
+
+```bash
+npm run build:pages
+npm run preview
+```
+
+En modo Pages, abre `/delacasa-produccion/` dentro del servidor de vista previa.
+Las rutas utilizan `#/produccion`, `#/contenedores`, etc., para permitir recargas
+y enlaces directos sin errores 404. El desarrollo local conserva sus rutas habituales.
+
+URL prevista: https://myesner.github.io/delacasa-produccion/
+
+La web de Pages será pública y mostrará los datos que lee del Sheet. La privacidad
+del repositorio es independiente. GitHub Pages en repositorios privados requiere
+un plan que lo admita; esta configuración no cambia la visibilidad del repositorio.
+Los cambios hechos en Sheets se leen cada minuto, sin necesidad de recompilar la página.

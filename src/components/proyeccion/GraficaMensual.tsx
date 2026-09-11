@@ -191,7 +191,7 @@ export default function GraficaMensual({ meses, unidad, mesReferencia, seleccion
     >
       {/* Marca de agua del contenedor isométrico (6% opacidad) */}
       <img
-        src="/container-iso.svg"
+        src={`${import.meta.env.BASE_URL}container-iso.svg`}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-6 -right-6 w-56 opacity-[0.06] dark:invert"
