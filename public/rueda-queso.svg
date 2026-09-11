@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#5C4A33" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Rueda de queso con cuña cortada, estilo lineal consistente con container-iso.svg -->
+  <!-- Cuerpo de la rueda (cilindro visto 3/4) -->
+  <path d="M256 88 C132 88 56 132 56 196 L56 316 C56 380 132 424 256 424 C380 424 456 380 456 316 L456 196"/>
+  <!-- Tapa superior elipse (arco trasero) -->
+  <path d="M56 196 C56 132 132 88 256 88 C380 88 456 132 456 196"/>
+  <!-- Cuña cortada: caras interiores -->
+  <path d="M256 196 L160 120"/>
+  <path d="M256 196 L400 108"/>
+  <path d="M256 196 L256 368"/>
+  <!-- Corte vertical de la cuña -->
+  <path d="M160 120 L160 250"/>
+  <path d="M400 108 L400 240"/>
+  <!-- Arco frontal de la tapa (interior del corte) -->
+  <path d="M160 250 C190 300 322 300 400 240"/>
+  <!-- Detalles de corteza -->
+  <path d="M96 250 C96 300 160 340 256 340" opacity="0.45" stroke-width="6"/>
+  <path d="M110 168 C150 130 220 112 290 116" opacity="0.45" stroke-width="6"/>
+  <!-- Ojos del queso -->
+  <circle cx="300" cy="230" r="14" opacity="0.6" stroke-width="6"/>
+  <circle cx="210" cy="270" r="10" opacity="0.6" stroke-width="6"/>
+  <circle cx="330" cy="300" r="8" opacity="0.6" stroke-width="6"/>
+</svg>

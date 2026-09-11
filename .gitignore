@@ -1,0 +1,27 @@
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+coverage/
+*.tsbuildinfo
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*service-account*.json
+*credentials*.json
+
+# Editor, operating system, and agent-local state
+.DS_Store
+.vscode/
+.idea/
+.agents/
+.codex/
+
+# Logs and browser test artifacts
+*.log
+playwright-report/
+test-results/
